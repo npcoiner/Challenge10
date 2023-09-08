@@ -4,7 +4,6 @@ const { Circle, Square, Triangle } = require("./lib/shapes.js");
 const generateSVG = require('./utils/generateSVG')
 
 const questions = [
-    //Added questions based on requirements
     {
         type: 'list',
         message: "Choose a shape:",
