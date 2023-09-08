@@ -4,36 +4,67 @@ const { Circle, Square, Triangle } = require("./lib/shapes.js");
 const generateSVG = require('./utils/generateSVG')
 
 const questions = [
-
-
     //Added questions based on requirements
     {
         type: 'list',
-        message: "Choose a license:",
-        name: "license",
+        message: "Choose a shape:",
+        name: "shape",
         choices:[
-            "apache-2.0",
-            "bsl-1.0",
-            "bsd-2-clause",
-            "bsd-3-clause",
-            "cc0-1.0",
-            "cc-by-4.0",
-            "wtfpl",
-            "epl-1.0",
-            "agpl-3.0",
-            "gpl-2.0",
-            "gpl-3.0",
-            "lgpl-3.0",
-            "isc",
-            "mit",
-            "mpl-2.0",
-            "unlicense",
-            "zlib",
+            "triangle",
+            "circle",
+            "square",
         ],
         validate: (input) => {
             return input ? true : (console.log(this.message), false)
         }
     },
+    {
+        type: 'list',
+        message: "Choose a color for the shape:",
+        name: "shapeColor",
+        choices:[
+            "red",
+            "orange",
+            "yellow",
+            "green",
+            "blue",
+            "purple",
+            "brown",
+            "white",
+            "black",
+        ],
+        validate: (input) => {
+            return input ? true : (console.log(this.message), false)
+        }
+    },
+    {
+        type: 'input',
+        message: "Type up to 3 letters:",
+        name: "text",
+        validate: (input) => {
+            return (input.length < 4) ? true : (console.log(this.message), false)
+        }
+    },
+    {
+        type: 'list',
+        message: "Choose a color for the text:",
+        name: "textColor",
+        choices:[
+            "red",
+            "orange",
+            "yellow",
+            "green",
+            "blue",
+            "purple",
+            "brown",
+            "white",
+            "black",
+        ],
+        validate: (input) => {
+            return input ? true : (console.log(this.message), false)
+        }
+    },
+    
 ];
 
 function generateSVG(){
