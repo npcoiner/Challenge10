@@ -22,4 +22,6 @@ function init() {
     .then((answers) => {writeToFile(`newREADME.md`,answers)})
     .then(() => console.log('done'))
 
-}
+};
+
+init();
