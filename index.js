@@ -15,3 +15,11 @@ function writeToFile(fileName, data) {
     const md = generateSVG(data);
     writeFile(fileName,md);
 }
+
+//initializes the app
+function init() {
+    inquirer.prompt(questions)
+    .then((answers) => {writeToFile(`newREADME.md`,answers)})
+    .then(() => console.log('done'))
+
+}
