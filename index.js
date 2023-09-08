@@ -24,4 +24,5 @@ function init() {
 
 };
 
+//call init
 init();
