@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const {writeFile} = require('fs').promises;
-const generateSVG = require('./utils/generateSVG')
+const generateSVG = require('./lib/utils/generateSVG')
 
 const questions = [
     {
