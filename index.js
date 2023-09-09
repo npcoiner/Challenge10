@@ -77,9 +77,8 @@ function writeToFile(fileName, data) {
 //initializes the app
 function init() {
     inquirer.prompt(questions)
-    .then((answers) => {writeToFile(`newREADME.md`,answers)})
+    .then((answers) => {writeToFile(`shape.svg`,answers)})
     .then(() => console.log('done'))
-
 };
 
 //call init
