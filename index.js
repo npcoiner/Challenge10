@@ -65,9 +65,7 @@ const questions = [
     
 ];
 
-function generateSVG(){
 
-}
 //TODO: this needs to follow SVG requirements
 function writeToFile(fileName, data) {
     const md = generateSVG(data);
